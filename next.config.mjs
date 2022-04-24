@@ -1,8 +1,9 @@
-import withPlugins from "next-compose-plugins";
-import nextBundleAnalyzer from "@next/bundle-analyzer";
+import withPlugins from 'next-compose-plugins';
+import withFonts from 'next-fonts';
+import nextBundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = nextBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+  enabled: process.env.ANALYZE === 'true',
 });
 
 /** @type {import('next').NextConfig} */
@@ -12,15 +13,12 @@ const nextConfigs = {
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
-        react: "preact/compat",
-        "react-dom": "preact/compat",
-      })
+        react: 'preact/compat',
+        'react-dom': 'preact/compat',
+      });
     }
     return config;
   },
-}
+};
 
-export default withPlugins(
-  [withBundleAnalyzer],
-  nextConfigs
-);
+export default withPlugins([withBundleAnalyzer, withFonts], nextConfigs);
