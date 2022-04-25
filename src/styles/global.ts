@@ -10,7 +10,7 @@ export default createGlobalStyle`
         src: url(${times}) format('truetype');
         font-weight: 300;
         font-style: normal;
-        font-display: auto;
+        font-display: swap;
     }
 
     @font-face {
@@ -18,7 +18,7 @@ export default createGlobalStyle`
         src: url(${timesBold}) format('truetype');
         font-weight: 300;
         font-style: normal;
-        font-display: auto;
+        font-display: swap;
     }
 
     @font-face {
@@ -26,7 +26,7 @@ export default createGlobalStyle`
         src: url(${timesItalic}) format('truetype');
         font-weight: 300;
         font-style: normal;
-        font-display: auto;
+        font-display: swap;
     }
 
     @font-face {
@@ -34,7 +34,7 @@ export default createGlobalStyle`
         src: url(${timesBoldItalic}) format('truetype');
         font-weight: 300;
         font-style: normal;
-        font-display: auto;
+        font-display: swap;
     }
 
     body {
